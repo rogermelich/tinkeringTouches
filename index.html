@@ -36,10 +36,11 @@
 
     function init() {
         var canvas = document.getElementById('canvas');
-        canvas.addEventListener('touchstart', start(), false)
-        canvas.addEventListener('touchend', end(), false)
-        canvas.addEventListener('touchmode', move(), false)
+        canvas.addEventListener('touchstart', start, false)
+        canvas.addEventListener('touchend', end, false)
+        canvas.addEventListener('touchmode', move, false)
     }
+
     init();
 
 </script>
