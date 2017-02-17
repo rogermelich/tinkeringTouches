@@ -14,7 +14,8 @@
 <canvas id="canvas" width="800" height="800"></canvas>
 
 <script>
-    function report() {
+
+    function report(newContent) {
         var output = document.getElementById('output');
         output.innerHTML += newContent;
     }
@@ -32,13 +33,11 @@
     }
 
     function init() {
-        var canvas = this.getElementById('canvas');
-
-        canvas.getEventLisener('touchstart', start(), false);
-        canvas.getEventLisener('touchend', end(), false);
-        canvas.getEventLisener('touchmove', move(), false);
+        var canvas = document.getElementById('canvas');
+        canvas.addEventListener('touchstart', start(), false)
+        canvas.addEventListener('touchend', end(), false)
+        canvas.addEventListener('touchmode', move(), false)
     }
-
     init();
 
 </script>
