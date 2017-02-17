@@ -9,19 +9,26 @@
 </head>
 <body>
 
+<output id="output"></output>
+
 <canvas id="canvas" width="800" height="800"></canvas>
 
 <script>
-    function start(){
+    function report(){
+        var output = document.getElementById('output');
+        output.innerHTML += newContent;
+    }
 
+    function start(){
+        report('start')
     }
 
     function end(){
-
+        report('end')
     }
 
     function move(){
-
+        report('move')
     }
 
     function init(){
@@ -31,6 +38,8 @@
         canvas.getEventLisener('touchend', end(), false);
         canvas.getEventLisener('touchmove', move(), false);
     }
+
+    init();
 
 </script>
 
