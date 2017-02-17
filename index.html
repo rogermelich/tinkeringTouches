@@ -17,6 +17,10 @@
 
 <script>
 
+    function delayHTML(newContent){
+        output.innerHTML = newContent;
+    }
+
     function report(newContent) {
         var output = document.getElementById('output');
         output.innerHTML += newContent;
