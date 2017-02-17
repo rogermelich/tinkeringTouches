@@ -14,25 +14,25 @@
 <canvas id="canvas" width="800" height="800"></canvas>
 
 <script>
-    function report(){
+    function report() {
         var output = document.getElementById('output');
         output.innerHTML += newContent;
     }
 
-    function start(){
+    function start() {
         report('start')
     }
 
-    function end(){
+    function end() {
         report('end')
     }
 
-    function move(){
+    function move() {
         report('move')
     }
 
-    function init(){
-        var canvas = this.getElementById(canvas);
+    function init() {
+        var canvas = this.getElementById('canvas');
 
         canvas.getEventLisener('touchstart', start(), false);
         canvas.getEventLisener('touchend', end(), false);
